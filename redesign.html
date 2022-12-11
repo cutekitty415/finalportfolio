@@ -10,7 +10,7 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Personas</title>
+        <title>Responsive Redesign</title>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -39,7 +39,7 @@
         <main class="l-main"></main>
             <section class="project" id="project">
                 <div class="project__container bd-grid">
-                    <h1 class="project__title">Personas</h1>
+                    <h1 class="project__title"> Redesign</h1>
                     <div class="project__scroll">
                     </div>
                 </div>
@@ -49,15 +49,14 @@
             <section class="context section" id="context">
                 <div class="project_content bd-grid">
                     <div class="project__img">
-                        <img src="assets/img/personas.png" alt="">
+                        <img src="assets/img/redesign.png" alt="">
                     </div>
 
                     <div>
                         <h2 class="about__subtitle">Context</h2>
                     
                         <p class="about__text">
-                            In fast-food and casual restaurants, it's more common than ever to see a self-order kiosk as soon as you walk in the door. In this project, I observed real users interacting with a self-order kiosk at Tiger Sugar, a boba shop on Thayer Street. I interviewed these individuals about their experiences, crafted personas based on their responses, and sketched a storyboard mapping out the user experience.
-                        </p>
+                            The design of a business's webpage can have an enormous influence on how successful it can be. In this assignment, I underwent the workflow of the entire process of redesigning a simple home page for the website of a small restaurant. I learned to analyze and identify flaws in an existing interface, created low-fidelity and high-fidelity prototypes, and built a responsive website based on those prototypes.                        </p>
                     </div>
                 </div>
             </section>
@@ -68,37 +67,65 @@
                     <div>
                         <h2 class="about__subtitle">Research</h2>
                         <p class="about__text">
-                            The self-ordering kiosk at Tiger Sugar is a small system consisting mainly of a touchscreen with a payment scanner. The figure on the left is the touchscreen, which includes Tiger Sugar's menu and guides customers through the ordering process – from customizing their drinks, payment, reward points, and pickup.
-                        </p>
+                            I chose to redesign the home page for a local vegan restaurant in my hometown: Garden Fresh. This is one of my family’s favorite restaurants to visit, yet its website seems a bit outdated and has a lot of room for potential improvement. There are three main elements to the homepage: link to order, photo gallery, and restaurant information.                        </p>
                         <p class="about__text">
-                            The key problem this interface is trying to solve is allowing customers to make their own orders at Tiger Sugar. This can allow the ordering process to be more efficient and reduce waiting time for customers, since more employees can focus on crafting boba drinks instead of serving customers.
+                            You can access the home page of the restaurant <a class="project_contentlink" href="https://www.gardenfreshpaloalto.com/home">here</a>.   
+                        </p>
+                        <p class="about-text">
+                            I used WebAIM WAVE to detect possible accessibility problems, which detected no errors with the web page with 4 potential alerts. One alert included the issue with redundant ordering buttons that I had described earlier. Manual testing is still necessary to ensure accessibility for the user. Specifically, if there are no navigation buttons, menu link, affordances, and icons existing on the website in the first place, WebAIM WAVE would have a hard time finding an error with these missing elements.
                         </p>
                     </div>
                     <div class="project__img">
-                        <img src="assets/img/personas_research.png" alt="">
+                        <img src="assets/img/redesign_oldwebsite.png" alt="">
                     </div>
                 </div>
                 <div class="project_content1 bd-grid">
                     <div>
-                        <h3>Observations & Questions</h3>
-                            I observed three users using the self-ordering interface, and recorded some key observations about their interactions with the interface.
+                        <h3>Identifying Usability Problems
+                        </h3>
+                                Next, I manually analyzed the home page of Garden Fresh based on usability and accessibility standards.
                             <div class="project_content3 bd-grid">
                                 <div class="about__text">
-                                    <h3>User A</h3>
+                                    <h3>Efficiency</h3>
+                                    <li class="project_contentlist">Incorrect navigation buttons</li>
                                     <p>
-                                        User A’s interactions with the self-ordering interface were very rushed. This user scrolled up and down the menu very quickly, and repeated their taps when pressing the button to return to the menu screen. In addition, User A chose to tap on the Skip button and not claim their rewards from the drink’s purchase.                                    </p>
-                                </div>
-                                <div class="about__text">
-                                    <h3>User B</h3>
+                                        Clicking on the restaurant’s logo takes you to the shopping cart page page. There are also two duplicate buttons that take users to the ordering page: “Order Online” and “Click Here”.
+                                    </p>
+                                    <li class="project_contentlist">Lack of navigation to critical elements</li>
                                     <p>
-                                        User B spent the longest amount of time interacting with the interface. The majority of the time was spent choosing a drink and customizing toppings. This user went back and forth between the menu screen and individual drink screens, and frequently changed the drink selections and customization options in the cart.
+                                        There is no menu button, which is essential for the web page of a restaurant business. According to OpenTable, 93% of people look at a restaurant’s menu online before dining out.
+                                    </p>
+                                    <li class="project_contentlist">There are no clear buttons for calling the restaurant</li>
+                                    <p>
+                                        The text for the restaurant’s phone number is very small, and since the phone number is the only form of contact information listed on the website, it should be in clear view so that potential customers can call the restaurant with questions and orders.
                                     </p>
                                 </div>
                                 <div class="about__text">
-                                    <h3>User C</h3>
+                                    <h3>Learnability</h3>
+                                    <li class="project_contentlist">Confusing color scheme</li>
                                     <p>
-                                        User C came into the store with another person and ordered for both of them. User C asked the other person for which order they would like, and customized their drink selection accordingly. However, when checking out, the other person noticed that User C made a mistake in their order and made User C go back to change the drink customization.
+                                        Dark orange is used in both “Order Now” subheading and “Order Now” button. This adds to user confusion because the heading is too similar to button colors.
                                     </p>
+                                    <li class="project_contentlist">Lack of affordances and icons </li>
+                                    <p>
+                                        ‍The "Click Here” button can benefit from adding arrow sign. The“Food types” section uses the same check mark icons for all of the different food types, but can better visually communicate the different cuisines by using different food icons.
+                                    </p>
+                                    <li class="project_contentlist">Images of the restaurant’s dishes are organized very messily </li>
+                                    <p>
+                                        The messy organization of the restaurant's food pictures can be unappealing and put off the appetite of potential customers
+                                    </p>
+                                </div>
+                                <div class="about__text">
+                                    <h3>Memorability                                    </h3>
+                                    <li class="project_contentlist">Lacking large picture of delicious food</li>
+                                    <p>
+                                        When landing on the page, a high-quality image of a signature dish can increase users’ memorability of the cuisine. Rather, not having an image of what type of food the restaurant serves can put off potential customers.
+                                    </p>
+                                    <li class="project_contentlist">Website not optimized for mobile devices </li>
+                                    <p>
+                                        ‍Users have to vertically scroll through all of the individual food pictures before reaching restaurant information section. This is extremely difficult to do, since there are so many food pictures. The organization of the website on mobile devices is not very logical, since the most important parts of the website such as contact information and hours are placed at the very end. 
+                                    </p>
+                                    
                                 </div>
                             </div>
                         
@@ -110,28 +137,63 @@
              <!--===== DESIGNS =====-->
              <section class="designs section" id="designs">
                 <div class="project__content bd-grid">
-                    <h2 class="about__subtitle">Personas and Storyboard</h2>
+                    <h2 class="about__subtitle">Visual Redesigns</h2>
                     <div>
-                        Using the data I collected from my observations and interviews, I created two personas based on overarching trends I observed amongst all the users I interviewed. For each persona, I developed a four-quadrant empathy map.
-                    </div>
+                        Based off of the errors I identified, I created low-fidelity wireframes, a visual design style guide, and high-fidelity prototypes.                   </div>
                 </div>
-                <div class="project_content bd-grid">        
+
+                <div class="project_content1 bd-grid">        
+                    <h3 class="about__subtitle">Low-fi Wireframes</h2>
+                        <p>I first used Balsamiq to create a total of 3 low-fidelity prototypes, with a separate wireframe for laptops, mobile devices, and tablets. </p>
+                </div> 
+                <div class="project_content1 bd-grid">        
                     <div class="project__img">
-                        <img src="assets/img/persona1.png" alt="">
+                        <img src="assets/img/redesign_lowfi1.png" alt="">
                     </div>
+                </div>
+                <div class="project_content1 bd-grid">        
                     <div class="project__img">
-                        <img src="assets/img/persona2.png" alt="">
+                        <img src="assets/img/redesign_lowfi2.png" alt="">
                     </div>
                 </div>
-                <div class="project__content bd-grid">
-                    <div>
-                        I created a storyboard featuring one of the personas, Ruby, in order to better illustrate the user experience of using the self-ordering kiosk at Tiger Sugar.
+                <div class="project_content1 bd-grid">        
+                    <div class="project__img">
+                        <img src="assets/img/redesign_lowfi3.png" alt="">
                     </div>
                 </div>
-                <div class="project__img">
-                    <div>
-                        <img src="assets/img/storyboard.png" alt="">                    </div>
+
+                <div class="project_content1 bd-grid">        
+                    <h3 class="about__subtitle">Style Guide</h2>
+                        <p class="about-text"> Next, I created a visual design style guide using Canva that  displays the main colors, typography, and reusable components’ different states (buttons on hover, click, etc.).  </p>
+                </div> 
+                <div class="project_content1 bd-grid">        
+                    <div class="project__img">
+                        <img src="assets/img/redesign_styleguide.png" alt="">
+                    </div>
                 </div>
+
+                <div class="project_content1 bd-grid">        
+                    <h3 class="about__subtitle">High-Fi Prototypes</h2>
+                        <p>Finally, using Figma, I created 3 high-fidelity prototypes based on the low-fidelity wireframes I created. </p>
+                </div> 
+                <div class="project_content1 bd-grid">        
+                    <div class="project__img">
+                        <img src="assets/img/redesign_hifi1.png" alt="">
+                    </div>
+                </div>
+                <div class="project_content1 bd-grid">        
+                    <div class="project__img">
+                        <img src="assets/img/redesign_hifi2.png" alt="">
+                    </div>
+                </div>
+                <div class="project_content1 bd-grid">        
+                    <div class="project__img">
+                        <img src="assets/img/redesign_hifi3.png" alt="">
+                    </div>
+                </div>
+    
+
+
             </section>           
 
             <!--===== CONCLUSION =====-->
@@ -139,8 +201,14 @@
                 <div class="project__content bd-grid">
                     <h2 class="about__subtitle">Conclusion</h2>
                     <div>
-                        Through this project, I learned a lot about how to approach designing personas for a particular interface. I discovered that users of self-ordering kiosks faced the challenge of tipping even without the pressure of having a physical employee watching them. An interesting lesson I learned was that observing people in public can be much more difficult in practice because it is hard not to interact with the person you are observing.                    </div>
-                </div>
+                    <p>
+                        Here is the link to the redesigned website incorporating the elements that I created above: <a href="https://cutekitty415.github.io/assign0/" class="project_contentlink">Redesigned Website</a>.                         The new website is built with HTML and CSS, and fully responsive with some buttons or navigational elements being replaced with dummy elements.
+                        Through this project, I learned a lot about usability and accessibility standards. I discovered that websites need to be responsive on many different types of devices, and that a good design needs to be flexible enough to support those different formats. An interesting lesson I learned was that implementing a scrolling photo gallery was no more difficult than implementing a grid-style photo gallery.
+
+                    </p>
+                    
+                    </div>
+
             </section>      
 
 
