@@ -10,14 +10,14 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Personas</title>
+        <title>Development</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="index.html" class="nav__logo"> Emily Wang</a>
+                    <a href="index.html" class="nav__logo"> First Last</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -39,7 +39,7 @@
         <main class="l-main"></main>
             <section class="project" id="project">
                 <div class="project__container bd-grid">
-                    <h1 class="project__title">Personas</h1>
+                    <h1 class="project__title">Development</h1>
                     <div class="project__scroll">
                     </div>
                 </div>
@@ -49,15 +49,14 @@
             <section class="context section" id="context">
                 <div class="project_content bd-grid">
                     <div class="project__img">
-                        <img src="assets/img/personas.png" alt="">
+                        <img src="assets/img/development.png" alt="">
                     </div>
 
                     <div>
                         <h2 class="about__subtitle">Context</h2>
                     
                         <p class="about__text">
-                            In fast-food and casual restaurants, it's more common than ever to see a self-order kiosk as soon as you walk in the door. In this project, I observed real users interacting with a self-order kiosk at Tiger Sugar, a boba shop on Thayer Street. I interviewed these individuals about their experiences, crafted personas based on their responses, and sketched a storyboard mapping out the user experience.
-                        </p>
+                            In this project, I developed an interactive interface, used interface components, and tied the components to an internal data state. The goal of this application is for users to buy carefully-curated and high-quality athletic apparel from a variety of different brands. Although there are many good companies that produce athletic sportswear in today's market, it can be difficult for users to navigate through and choose the best products. Therefore, the value of this application is that it saves users time from browsing many different brands' websites and also allows users to choose from only the best products from each brand.                        </p>
                     </div>
                 </div>
             </section>
@@ -68,39 +67,38 @@
                     <div>
                         <h2 class="about__subtitle">Research</h2>
                         <p class="about__text">
-                            The self-ordering kiosk at Tiger Sugar is a small system consisting mainly of a touchscreen with a payment scanner. The figure on the left is the touchscreen, which includes Tiger Sugar's menu and guides customers through the ordering process – from customizing their drinks, payment, reward points, and pickup.
-                        </p>
+                            Ecommerce websites should be easy to navigate, so the organization of the application was a simple two-column layout with the products on the left-hand side and the Favorites and filters on the right-hand side. In regards to the color scheme, a black/gray/white color palette was selected because product images were imported from many different brands and had varying background colors and styles.
+                         </p>
                         <p class="about__text">
-                            The key problem this interface is trying to solve is allowing customers to make their own orders at Tiger Sugar. This can allow the ordering process to be more efficient and reduce waiting time for customers, since more employees can focus on crafting boba drinks instead of serving customers.
+                            A more simple color palette is optimal in order to mesh well with products from all brands in the store. Another usability principle considered was choosing which sorting and filtering arrangements would be most user-friendly. After careful consideration, popularity and price was chosen for sorting while brand and color were chosen for filtering.
                         </p>
                     </div>
                     <div class="project__img">
-                        <img src="assets/img/personas_research.png" alt="">
+                        <img src="assets/img/ecommerce.jpg" alt="">
                     </div>
                 </div>
                 <div class="project_content1 bd-grid">
                     <div>
-                        <h3>Observations & Questions</h3>
-                            I observed three users using the self-ordering interface, and recorded some key observations about their interactions with the interface.
-                            <div class="project_content3 bd-grid">
+                        <h3>Architecture and Hierarchy</h3>
+                        In order to design the architecture of this application, the following characteristics were considered. The application should handle any combination of filters, and all filters and sorting methods should work together without breaking the page. Additionally, there needs to be an option to add to and remove items from the aggregator section and a method to revert back to the original state without refreshing the page. Finally, the design should be intuitive and easy to use.                            <div class="project_content3 bd-grid">
                                 <div class="about__text">
-                                    <h3>User A</h3>
+                                    <h3>Organization</h3>
                                     <p>
-                                        User A’s interactions with the self-ordering interface were very rushed. This user scrolled up and down the menu very quickly, and repeated their taps when pressing the button to return to the menu screen. In addition, User A chose to tap on the Skip button and not claim their rewards from the drink’s purchase.                                    </p>
-                                </div>
-                                <div class="about__text">
-                                    <h3>User B</h3>
-                                    <p>
-                                        User B spent the longest amount of time interacting with the interface. The majority of the time was spent choosing a drink and customizing toppings. This user went back and forth between the menu screen and individual drink screens, and frequently changed the drink selections and customization options in the cart.
+                                        This application contains two separate React components: Cart and ProductItem. The Cart functions as a list of the products a user has added to favorites,  The ProductItem component is a bootstrap card displaying the information of each particular product, such as the name, brand, color, and price. 
                                     </p>
                                 </div>
                                 <div class="about__text">
-                                    <h3>User C</h3>
+                                    <h3>Components</h3>
                                     <p>
-                                        User C came into the store with another person and ordered for both of them. User C asked the other person for which order they would like, and customized their drink selection accordingly. However, when checking out, the other person noticed that User C made a mistake in their order and made User C go back to change the drink customization.
+                                        For the Cart component, the list of items in the cart is passed into it as props. For the ProductItem component, two functions, onAddItem and onDeleteItem, are passed into it as props because they handle which actions will occur when the user wants to add or delete the particular product from the Cart.
                                     </p>
                                 </div>
-                            </div>
+                                <div class="about__text">
+                                    <h3>State Changes</h3>
+                                    <p>
+                                        The user triggers state changes in two instances: when they add a product to Favorites, and when they select a filter. When a user adds a product to Favorites, it triggers the state change of cartItems, which contains the list of items a user has added to Favorites. Since cartItems is an array, the different states are just the different combinations of items a user has added to Favorites. When the user selects a filter, such as a brand or color, it triggers the state change of whatever type of filter they selected. For example, if the user selects the brand "Alphalete", the type state changes to Alphalete.                                     </div>
+                                    </p>
+                                    </div>
                         
 
                     </div>
@@ -110,28 +108,23 @@
              <!--===== DESIGNS =====-->
              <section class="designs section" id="designs">
                 <div class="project__content bd-grid">
-                    <h2 class="about__subtitle">Personas and Storyboard</h2>
+                    <h2 class="about__subtitle">Final Application</h2>
                     <div>
-                        Using the data I collected from my observations and interviews, I created two personas based on overarching trends I observed amongst all the users I interviewed. For each persona, I developed a four-quadrant empathy map.
+                        <p>
+                            The final web application can be accessed at 
+                            <a href="https://cutekitty415.github.io/development/" class="project_contentlink">https://cutekitty415.github.io/development/</a>
+                        </p>
                     </div>
                 </div>
                 <div class="project_content bd-grid">        
                     <div class="project__img">
-                        <img src="assets/img/persona1.png" alt="">
+                        <img src="assets/img/dev1.png" alt="">
                     </div>
                     <div class="project__img">
-                        <img src="assets/img/persona2.png" alt="">
+                        <img src="assets/img/dev2.png" alt="">
                     </div>
                 </div>
-                <div class="project__content bd-grid">
-                    <div>
-                        I created a storyboard featuring one of the personas, Ruby, in order to better illustrate the user experience of using the self-ordering kiosk at Tiger Sugar.
-                    </div>
-                </div>
-                <div class="project__img">
-                    <div>
-                        <img src="assets/img/storyboard.png" alt="">                    </div>
-                </div>
+            
             </section>           
 
             <!--===== CONCLUSION =====-->
@@ -139,8 +132,9 @@
                 <div class="project__content bd-grid">
                     <h2 class="about__subtitle">Conclusion</h2>
                     <div>
-                        Through this project, I learned a lot about how to approach designing personas for a particular interface. I discovered that users of self-ordering kiosks faced the challenge of tipping even without the pressure of having a physical employee watching them. An interesting lesson I learned was that observing people in public can be much more difficult in practice because it is hard not to interact with the person you are observing.                    </div>
-                </div>
+<p>
+    In this project, I learned to be more comfortable with React by creating a list-based interface. I gained experience in designing the architecture of my own application and learned how to handle balancing multiple different functions that interact with each other once I have a structure in mind.
+</p>                </div>
             </section>      
 
 
@@ -151,8 +145,8 @@
         <footer class="footer section">
             <div class="footer__container bd-grid">
                 <div class="footer__data">
-                    <h2 class="footer__title">JHON DOE</h2>
-                    <p class="footer__text">I'm Jhon Doe and this is my personal website</p>
+                    <h2 class="footer__title">FIRST LAST</h2>
+                    <p class="footer__text">I'm First Last and this is my personal website</p>
                 </div>
 
                 <div class="footer__data">
